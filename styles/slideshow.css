@@ -1,0 +1,174 @@
+/*css for slides*/
+
+.slideshow {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 1280px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 250%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 640px;
+  height: 400px;
+}
+
+/*css for menu*/
+
+.nav-menu {
+  position: absolute;
+  width: 1280px;
+  margin-top: -140px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button {
+  border: 2px solid #bf1e2e;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.menu-button:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-button:hover {
+  background: #bf1e2e;
+}
+
+.auto-nav {
+  position: absolute;
+  display: flex;
+  width: 1280px;
+  justify-content: center;
+  margin-top: 360px;
+}
+
+.auto-nav div {
+  border: 2px solid #bf1e2e;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.auto-nav div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#button1:checked ~ .first {
+  margin-left: 0;
+}
+
+#button2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#button3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#button4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#button5:checked ~ .first {
+  margin-left: -80%;
+}
+
+#button1:checked ~ .auto-nav .div {
+  background: #bf1e2e;
+}
+
+#button2:checked ~ .auto-nav .auto-button2 {
+  background: #bf1e2e;
+}
+
+#button3:checked ~ .auto-nav .auto-button3 {
+  background: #bf1e2e;
+}
+
+#button4:checked ~ .auto-nav .auto-button4 {
+  background: #bf1e2e;
+}
+
+#button5:checked ~ .auto-nav .auto-button5 {
+  background: #bf1e2e;
+}
+
+/*for smaller devices*/
+
+@media (max-width: 1440px) {
+  .slider {
+    width: 768px;
+  }
+  .slides {
+    width: 500%;
+  }
+  .slide img {
+    width: 768px;
+    height: 480px;
+  }
+  .nav-menu {
+    width: 768px;
+  }
+  .auto-nav {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 480px;
+  }
+  .slide img {
+    width: 480px;
+    height: 300px;
+  }
+  .nav-menu {
+    width: 480px;
+  }
+  .auto-nav {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 300px;
+    width: 340px;
+  }
+  .slide img {
+    width: 340px;
+    /* 212.5 - but deciaml pixels don't always render nicely px */
+    height: 213px;
+  }
+  .nav-menu {
+    width: 340px;
+  }
+  .auto-nav {
+    width: 340px;
+  }
+}
